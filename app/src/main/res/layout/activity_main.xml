@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="0px"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+
+    <!-- Spacer to push the content towards the top -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="5" />
+
+    <!-- Display TextView -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text=""
+        android:textColor="#dedbd5"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:gravity="end|center_vertical"
+        android:layout_marginRight="5dp"
+        android:padding="0dp" />
+
+    <!-- Result EditText -->
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text=""
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:focusable="false"
+        android:hint="0"
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:gravity="end|center_vertical"
+        android:layout_marginRight="10dp"
+        android:padding="0dp" />
+
+    <!-- Calculator Buttons (Group them in TableLayout) -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:padding="0dp"
+        android:layout_gravity="bottom">
+
+        <!-- First Row of Buttons -->
+        <TableRow>
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="C"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0" />
+
+            <Button
+                android:id="@+id/remove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/supprimer"
+                style="@style/CustomButton"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/parCent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="%"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0"/>
+
+            <Button
+                android:id="@+id/divise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="÷"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0"/>
+        </TableRow>
+
+        <!-- Second Row of Buttons -->
+        <TableRow>
+            <Button
+                android:id="@+id/nbr7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="7"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="9"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/multiply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="×"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0"/>
+        </TableRow>
+
+        <!-- Third Row of Buttons -->
+        <TableRow>
+            <Button
+                android:id="@+id/nbr4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="6"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0"/>
+        </TableRow>
+
+        <!-- Fourth Row of Buttons -->
+        <TableRow>
+            <Button
+                android:id="@+id/nbr1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+"
+                style="@style/CustomButton"
+                android:textColor="#ddc0f0"/>
+        </TableRow>
+
+        <!-- Fifth Row of Buttons (for last row) -->
+        <TableRow>
+            <Button
+                android:id="@+id/rotation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="R"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/nbr0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/point"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="."
+                style="@style/CustomButton" />
+
+            <Button
+                android:id="@+id/equal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:background="#ddc0f0"
+                style="@style/CustomButton"
+                android:textColor="#FFF" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
